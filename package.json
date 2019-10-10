@@ -1,0 +1,25 @@
+{
+  "name": "graphql-gateway",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "NODE_ENV=development node ./src/index.js",
+    "build": "cp -r src build && cp package*.json build/ "
+  },
+  "dependencies": {
+    "apollo-server": "^2.4.8",
+    "apollo-server-express": "^2.4.8",
+    "axios": "^0.18.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "^4.16.4",
+    "express-graphql": "^0.7.1",
+    "graphql": "^14.2.1",
+    "graphql-middleware": "^3.0.2",
+    "graphql-playground-react": "^1.7.20",
+    "@tessaroto/graphql-security": "^1.0.6",
+    "graphql-tools": "^4.0.4",
+    "morgan": "~1.9.0",
+    "schemaglue": "^4.0.4"
+  }
+}

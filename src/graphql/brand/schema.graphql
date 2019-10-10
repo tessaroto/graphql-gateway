@@ -1,0 +1,16 @@
+type Brand {
+  id: Int
+  name: String
+  status: Boolean
+  createdAt: String
+  lastUpdatedAt: String
+}
+
+type Query {
+  # ### GET brand
+  # Get a specific brand
+  # _Arguments_ 
+  # - **id**: Brand id
+  getBrand(id: ID!): Brand @auth(role: "brand-read")
+
+}

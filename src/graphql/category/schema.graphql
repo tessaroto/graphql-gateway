@@ -1,0 +1,18 @@
+type Category {
+  id: Int
+  name: String
+  parentId: Int
+  status: Boolean
+  createdAt: String
+  lastUpdatedAt: String
+  parent: Category
+}
+
+type Query {
+  # ### GET category
+  # Get a specific category
+  # _Arguments_ 
+  # - **id**: Category id
+  getCategory(id: ID!): Category @auth(role: "category-read")
+
+}

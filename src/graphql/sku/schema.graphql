@@ -1,0 +1,21 @@
+type Sku {
+  id: Int
+  name: String
+  productId: Int
+  status: Boolean
+  createdAt: String
+  lastUpdatedAt: String
+  product: Product
+}
+
+type Query {
+  # ### GET sku
+  # Get a specific sku
+  # _Arguments_ 
+  # - **id**: Sku id
+  getSku(id: ID!): Sku @auth(role: "sku-read")
+
+  # ### GET skus
+  # List all skus
+  getAllSkus(page: Int, pageSize: Int, sort: String, name: String): [Sku] @auth(role: "sku-read")
+}

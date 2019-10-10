@@ -1,0 +1,22 @@
+type Offer {
+  id: Int
+  skuId: Int
+  sellerId: String
+  status: Boolean
+  sellerExternalOfferId: String
+  price: Float
+  listPrice: Float
+  quantity: Int
+  createdAt: String
+  lastUpdatedByUser: String
+  lastUpdatedAt: String
+  sku: Sku
+}
+
+type Query {
+  # ### GET offer
+  # Get a specific offer
+  # _Arguments_ 
+  # - **id**: Offer id
+  getOffer(id: ID!): Offer @auth(role: "offer-read")
+}

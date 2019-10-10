@@ -1,0 +1,22 @@
+type Product {
+  id: Int
+  brandId: Int
+  name: String
+  status: Boolean
+  description: String
+  createdAt: String
+  lastUpdatedAt: String
+  brand: Brand
+}
+
+type Query {
+  # ### GET product
+  # Get a specific product
+  # _Arguments_ 
+  # - **id**: Product id
+  getProduct(id: ID!): Product @auth(role: "product-read")
+
+  # ### GET products
+  # List all products
+  getAllProducts(page: Int, pageSize: Int, name: String): [Product] @auth(role: "product-read")
+}
