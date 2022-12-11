@@ -12,7 +12,7 @@
     "axios": "^0.18.0",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "express-graphql": "^0.7.1",
     "graphql": "^14.2.1",
     "graphql-middleware": "^3.0.2",
